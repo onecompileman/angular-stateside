@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { UserService } from '../services/user.service';
 import { User } from '../../shared/models/user/user.model';
+import * as _ from 'lodash';
 
 @Injectable()
 export class UserStore {
@@ -25,5 +26,9 @@ export class UserStore {
 
   getAllSnapshot(): User[] {
     return this.users$.getValue();
+  }
+
+  getByIdSnapshot(id: number): User {
+    return _.find(this.users$.getValue(), { id });
   }
 }

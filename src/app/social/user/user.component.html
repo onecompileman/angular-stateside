@@ -1,3 +1,28 @@
-<p>
-  user works!
-</p>
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+    <div class="card">
+
+      <div class="card-block well">
+
+        <div class="box ">
+          <div class="icon">
+            <div class="image">
+              <img src="assets/user.png" height="50" width="50" class="img-responsive">
+            </div>
+          </div>
+          <div class="space"></div>
+        </div>
+        <h5 class="text-bold">{{ user?.name }}</h5>
+        <p>
+          <b>Company:</b> {{user?.company?.name}}</p>
+        <p>
+          <b>Email:</b> {{user?.email}}</p>
+        <p>
+          <b>Phone:</b> {{user?.phone}}</p>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-lg-2">
+
+      </div>
+    </div>
+  </div>
+</div>

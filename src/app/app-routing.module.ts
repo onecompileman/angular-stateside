@@ -6,6 +6,7 @@ import { MainComponent } from './main.component';
 import { AppInitResolver } from './core/resolvers/app-init.resolver';
 import { PostListComponent } from './social/post-list/post-list.component';
 import { UserListComponent } from './social/user-list/user-list.component';
+import { UserComponent } from './social/user/user.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
         path: 'users',
         pathMatch: 'full',
         component: UserListComponent
+      },
+      {
+        path: 'users/:id',
+        pathMatch: 'full',
+        component: UserComponent
       }
     ],
     resolve: {

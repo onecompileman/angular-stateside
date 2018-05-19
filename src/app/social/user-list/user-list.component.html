@@ -12,7 +12,9 @@
           </div>
           <div class="space"></div>
         </div>
-        <h5 class="text-bold">{{ user.name }}</h5>
+        <a [routerLink]="['users',user.id]">
+          <h5 class="text-bold">{{ user.name }}</h5>
+        </a>
         <p>
           <b>Company:</b> {{user.company.name}}</p>
         <p>

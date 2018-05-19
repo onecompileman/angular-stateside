@@ -5,6 +5,7 @@ import { MainComponent } from './main.component';
 
 import { AppInitResolver } from './core/resolvers/app-init.resolver';
 import { PostListComponent } from './social/post-list/post-list.component';
+import { UserListComponent } from './social/user-list/user-list.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,11 @@ const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: PostListComponent
+      },
+      {
+        path: 'users',
+        pathMatch: 'full',
+        component: UserListComponent
       }
     ],
     resolve: {

@@ -25,7 +25,7 @@ export class AppInitResolver implements Resolve<any> {
       ).subscribe(results => {
         const [users, posts] = results;
 
-        console.log(posts);
+        console.log(posts, users);
 
         this.postStore.store(
           posts.map(post => {
